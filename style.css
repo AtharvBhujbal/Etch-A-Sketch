@@ -1,0 +1,22 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 320px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* gap: 2px; */
+}
+.pixel{
+    width:20px;
+    height:20px;
+    background-color:black;
+    transition: 0.1s ease-in-out;
+}
+.pixel:hover{
+    background-color: aqua;
+}
