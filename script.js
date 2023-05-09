@@ -1,8 +1,10 @@
 const container = document.querySelector('.container');
 const pixel_button=document.querySelector('.pixel_button');
 const reset_button=document.querySelector('.reset_button');
+const erase_button=document.querySelector('.erase_button');
 pixel_button.addEventListener('click',fun_prompt);
 reset_button.addEventListener('click',reset);
+erase_button.addEventListener('click',erase);
 function fun_prompt(event){
     let number = prompt("How many pixels in a row?");
     let total_pixel = number * number;
@@ -13,6 +15,10 @@ function reset(){
     while(container.hasChildNodes()){
         container.removeChild(container.firstChild);
     }return;
+}
+function erase(){
+    const pixels=document.querySelectorAll('.pixel');
+    pixels.forEach(pixel=>pixel.style.backgroundColor= 'rgb(0,0,0)');
 }
 function new_sketch(total_pixel,width_height){
     reset();

@@ -32,9 +32,6 @@ body{
     align-items: center;
     justify-content: center;
 }
-.pixel{
-    background-color:black;
-}
 button{
     border: none;
     width: 200px;
