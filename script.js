@@ -11,7 +11,7 @@ function fun_prompt(event){
         number=prompt("Please enter a value less than 100");
     }
     let total_pixel = number * number;
-    let width_height = 640 / number;
+    let width_height = 64 / number;
     new_sketch(total_pixel,width_height);
 }
 function reset(){
@@ -28,7 +28,7 @@ function new_sketch(total_pixel,width_height){
     for (let i = 0; i < total_pixel; i++) {
     const div = document.createElement('div');
     div.classList.add('pixel');
-    div.setAttribute('style', `width: ${width_height}px; height: ${width_height}px`);
+    div.setAttribute('style', `width: ${width_height}vh; height: ${width_height}vh`);
     container.appendChild(div);
     div.addEventListener('mouseenter',rgb);
     }
