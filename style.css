@@ -7,7 +7,15 @@ body{
     justify-content: center;
     text-align: center;
 }
+.dashboard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
 .container{
+    background-color: black;
     width: 640px;
     height: 640px;
     display: flex;
@@ -18,7 +26,7 @@ body{
 .pixel{
     background-color:black;
 }
-.button{
+button{
     border: none;
     width: 120px;
     height: 40px;

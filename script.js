@@ -1,13 +1,21 @@
 const container = document.querySelector('.container');
-const button=document.querySelector('button');
-button.addEventListener('click',fun_prompt);
+const pixel_button=document.querySelector('.pixel_button');
+const reset_button=document.querySelector('.reset_button');
+pixel_button.addEventListener('click',fun_prompt);
+reset_button.addEventListener('click',reset);
 function fun_prompt(event){
     let number = prompt("How many pixels in a row?");
     let total_pixel = number * number;
     let width_height = 640 / number;
     new_sketch(total_pixel,width_height);
 }
+function reset(){
+    while(container.hasChildNodes()){
+        container.removeChild(container.firstChild);
+    }return;
+}
 function new_sketch(total_pixel,width_height){
+    reset();
     for (let i = 0; i < total_pixel; i++) {
     const div = document.createElement('div');
     div.classList.add('pixel');
