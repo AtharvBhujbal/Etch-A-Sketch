@@ -7,6 +7,9 @@ reset_button.addEventListener('click',reset);
 erase_button.addEventListener('click',erase);
 function fun_prompt(event){
     let number = prompt("How many pixels in a row?");
+    if(number>100){
+        number=prompt("Please enter a value less than 100");
+    }
     let total_pixel = number * number;
     let width_height = 640 / number;
     new_sketch(total_pixel,width_height);
