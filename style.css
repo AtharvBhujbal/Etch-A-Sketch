@@ -2,10 +2,18 @@ body{
     background-color: rgb(80, 80, 80);
     color: aliceblue;
     display: flex;
-    gap: 200px;
+    flex-direction: column;
+    gap: 50px;
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+.web_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 200px;
 }
 .dashboard{
     display: flex;
@@ -36,4 +44,13 @@ button{
     color: aliceblue;
     background-color: rgb(14, 14, 14);
     border-radius: 12px;
+}
+img{
+    transition: transform 0.3s ease-in-out;
+}
+img:hover{
+    transform: scale(1.2);
+}
+.footer a img{
+    width: 25px;
 }
