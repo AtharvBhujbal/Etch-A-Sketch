@@ -6,14 +6,20 @@ pixel_button.addEventListener('click',fun_prompt);
 reset_button.addEventListener('click',reset);
 erase_button.addEventListener('click',erase);
 function fun_prompt(event){
-    let number = prompt("How many pixels in a row?");
-    if(number>100){
-        number=prompt("Please enter a value less than 100");
+    let number = 0;
+    while (true) {
+        number = prompt("How many pixels in a row?");
+        if(Number.isInteger(Number(number)) && Number(number) >= 1 && Number(number) <= 100){
+            break;
+        } else {
+            alert("Please enter a valid integer between 1 and 100.");
+        }
     }
     let total_pixel = number * number;
     let width_height = 64 / number;
-    new_sketch(total_pixel,width_height);
+    new_sketch(total_pixel, width_height);
 }
+
 function reset(){
     while(container.hasChildNodes()){
         container.removeChild(container.firstChild);
