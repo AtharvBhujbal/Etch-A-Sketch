@@ -9,9 +9,13 @@ function fun_prompt(event){
     let number = 0;
     while (true) {
         number = prompt("How many pixels in a row?");
-        if(Number.isInteger(Number(number)) && Number(number) >= 1 && Number(number) <= 100){
+        if(number==null){
+            return; // exit the function if the user clicks cancel
+        }
+        else if(Number.isInteger(Number(number)) && Number(number) >= 1 && Number(number) <= 100){
             break;
-        } else {
+        } 
+        else {
             alert("Please enter a valid integer between 1 and 100.");
         }
     }
