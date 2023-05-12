@@ -13,7 +13,7 @@ function fun_prompt(event){
             return; // exit the function if the user clicks cancel
         }
         else if(Number.isInteger(Number(number)) && Number(number) >= 1 && Number(number) <= 100){
-            break;
+            break; //exits the loop when user enters correct integer
         } 
         else {
             alert("Please enter a valid integer between 1 and 100.");
