@@ -8,6 +8,7 @@ body{
     align-items: center;
     justify-content: space-between;
     text-align: center;
+    height: 95vh;
 }
 .web_container{
     display: flex;
